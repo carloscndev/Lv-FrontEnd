@@ -2,7 +2,7 @@
 import React from 'react'
 
 const ProductDetail = () => (
-  <div>
+  <div className='product-detail'>
     ProductDetail
   </div>
 )
