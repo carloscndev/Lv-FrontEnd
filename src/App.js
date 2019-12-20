@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Routes from './routes'
 
 // Import Styles
-import './styles/index.scss'
+import './styles/reset.scss'
 
 const App = () => (
   <Router>

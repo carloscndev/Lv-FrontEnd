@@ -3,12 +3,11 @@ import React, { lazy, Suspense } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 // Import Components
+const MainLayout = lazy(() => import('../components/layouts/MainLayout'))
 const ProductDetail = lazy(() => import('../components/pages/ProductDetail'))
 const NotFound = lazy(() => import('../components/pages/NotFound'))
-const MainLayout = lazy(() => import('../components/layouts/MainLayout'))
 
 const Routes = () => (
-
   <Suspense fallback={<div>Loading...</div>}>
     <MainLayout>
       <Switch>
