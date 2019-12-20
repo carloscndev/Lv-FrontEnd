@@ -1,9 +1,11 @@
 // Import Modules
 import React from 'react'
 
-const MainLayout = () => (
+const MainLayout = ({ children }) => (
   <div className='app'>
-    Main Layout
+    <main>
+      {children}
+    </main>
   </div>
 )
 

@@ -5,13 +5,17 @@ import { Switch, Route } from 'react-router-dom'
 // Import Components
 const ProductDetail = lazy(() => import('../components/pages/ProductDetail'))
 const NotFound = lazy(() => import('../components/pages/NotFound'))
+const MainLayout = lazy(() => import('../components/layouts/MainLayout'))
 
 const Routes = () => (
+
   <Suspense fallback={<div>Loading...</div>}>
-    <Switch>
-      <Route path='/' exact strict render={() => <ProductDetail />} />
-      <Route path='*' exact strict component={() => <NotFound />} />
-    </Switch>
+    <MainLayout>
+      <Switch>
+        <Route path='/' exact strict render={() => <ProductDetail />} />
+        <Route path='*' exact strict component={() => <NotFound />} />
+      </Switch>
+    </MainLayout>
   </Suspense>
 )
 
